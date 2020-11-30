@@ -21,7 +21,7 @@ paramsDictFOM = {
 'x0': 0,
 'xf': 100,
 'nx': 256,
-'Time-Scheme': 'Explicit' ,
+'Time-Scheme': 'Implicit' ,
 'Number of Sub-Iterations': 20,
 'Residual Tolerance': 1e-15,
  
