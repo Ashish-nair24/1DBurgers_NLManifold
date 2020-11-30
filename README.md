@@ -1,6 +1,6 @@
 # 1DBurgers_NLManifold
 
-This is a finite volume solver for the 1D Paremetrised Burger's equation with an option to solve for reduced-order approximate solutions using the Galerkin and LSPG methods. A non-linear manifold learnt using autoencoders(non-linear map) is used to formulate the reduced set of equations.
+This is a finite volume solver for the 1D Parameterised Burger's equation with an option to solve for reduced-order, approximate solutions using the Galerkin and LSPG projection methods. A non-linear manifold learnt using autoencoders(non-linear map) is used to map to and from the latent space.
 
 # Dependencies
 
@@ -25,4 +25,4 @@ The full-order solver uses the Godunov's scheme to solve for the spatial fluxes 
 
 ### Reduced-Order formulation 
 
-The reduced-order solver uses Galerkin or LSPG projections(based on user choice) to evolve the latent variable (reduced set of equations). The user can choose between the Decoder Jacobian formulation or the Encoder Jacobian formulation (novel method). The former uses the Moore-Penrose psuedo-inverse of the jacobian of the decoder netwrok at each time instant to map the full-order RHS to the latent space. The former uses the jacobian of the encoder network for the same.
+The reduced-order solver uses Galerkin or LSPG projections(based on user choice) to evolve the latent variable (reduced set of equations). The user can choose between the Decoder Jacobian formulation using `Calculate ROM : True` or the Encoder Jacobian formulation (novel method) using `Encoder Jacobian Approximation : True`, in `paramsDictROM`. The former uses the Moore-Penrose psuedo-inverse of the jacobian of the decoder netwrok at each time instant to map the full-order RHS to the latent space. The former uses the jacobian of the encoder network for the same.
