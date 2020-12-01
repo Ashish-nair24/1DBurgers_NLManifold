@@ -21,7 +21,7 @@ The reduced-order solver can be run by first specifying the ROM solver parameter
 
 ### Full-Order formulation
 
-The full-order solver uses the Godunov's scheme to solve for the spatial fluxes at each time instant and the user can choose between a first-order accurate implicit or explicit scheme for time-integration. The parameter space can be defined by specifying `Parameters` in `paramsDictFOM`.
+The full-order solver uses the Godunov's scheme to solve for the spatial fluxes at each time instance and the user can choose between a first-order accurate implicit or explicit scheme for time-integration. The parameter space can be defined by specifying `Parameters` in `paramsDictFOM`.
 
 ### Reduced-Order formulation 
 
